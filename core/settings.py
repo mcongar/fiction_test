@@ -52,6 +52,11 @@ REST_FRAMEWORK = {
     ],
 }
 
+AUTHENTICATION_BACKENDS = [
+    'users.authentication.EmailBackend',  # Usa el backend por email
+    'django.contrib.auth.backends.ModelBackend',  # Backend original por username
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

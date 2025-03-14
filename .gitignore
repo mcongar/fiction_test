@@ -1,0 +1,42 @@
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Environment
+.env
+.env.*
+venv/
+
+# SQLite database
+db.sqlite3
+
+# Static files
+staticfiles/
+media/
+
+# IDEs and editors
+# PyCharm
+.idea/
+# VSCode
+.vscode/
+# Eclipse
+.project
+.settings/
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Other files
+*.coverage
+*.py,cover
+nosetests.xml
+coverage.xml

@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root_fiction_miguel
+      MYSQL_DATABASE: fiction_miguel
+      MYSQL_USER: fiction_miguel
+      MYSQL_PASSWORD: fiction_miguel
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=fiction_miguel
+      - DB_USER=fiction_miguel
+      - DB_PASSWORD=fiction_miguel
+
+volumes:
+  mysql_data:

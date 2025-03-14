@@ -26,6 +26,8 @@ docker-compose exec web python manage.py createsuperuser
 
 
 ### Documentación de la API
-Django Admin → http://localhost:8000/admin/
-Swagger UI → http://localhost:8000/swagger/
-Esquema OpenAPI → http://localhost:8000/schema/
+- **Django Admin** → http://localhost:8000/admin/
+
+- **Swagger UI** → http://localhost:8000/swagger/
+
+- **Esquema OpenAPI** → http://localhost:8000/schema/

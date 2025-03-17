@@ -24,6 +24,9 @@ docker-compose exec web python manage.py migrate
 ### Crear un superusuario
 docker-compose exec web python manage.py createsuperuser
 
+### Ejecutar los tests
+docker-compose exec web python manage.py test
+
 
 ### Documentación de la API
 - **Django Admin** → http://localhost:8000/admin/
